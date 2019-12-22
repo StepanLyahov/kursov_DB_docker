@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CPU</title>
+</head>
+<body>
+    <a href="/main">
+        Домой
+    </a>
+
+    <form method="post">
+        <p>Тип производителя:</p>
+        <input type="text" name="manufacturer" placeholder="manufacturer" size="30">
+
+        <p>Серия:</p>
+        <input type="text" name="series" placeholder="series" size="30">
+
+        <p>Ядро:</p>
+        <input type="text" name="core" placeholder="core" size="30">
+
+        <p>Гнездо процессора:</p>
+        <input type="text" name="socket" placeholder="socket" size="30">
+
+        <p>Количество ядер:</p>
+        <input type="text" name="count_core" placeholder="count_core" size="30">
+
+        <p>Частота:</p>
+        <input type="text" name="frequency" placeholder="frequency" size="30">
+
+        <p>Встроенная графика:</p>
+        <input type="text" name="inserted_GPU" placeholder="inserted_GPU" size="30">
+
+        <p></p>
+        <input type="submit" value="Фильтровать">
+    </form>
+
+    <th:block th:each="CPU : ${list}">
+        <li th:utext="${CPU}">..</li>
+    </th:block>
+
+    <p th:text="${request}"/>
+
+</body>
+</html>

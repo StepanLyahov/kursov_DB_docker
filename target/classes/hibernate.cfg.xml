@@ -1,0 +1,9 @@
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/kursov</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.ddl-auto">update</property>
+        <mapping class="com.stepan.kursov.Model.CPU"/>
+    </session-factory>
+</hibernate-configuration>
